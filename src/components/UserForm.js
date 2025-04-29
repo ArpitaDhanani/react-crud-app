@@ -4,14 +4,13 @@ import './UserForm.css';
 const UserForm = ({ addUser, editUser, updateUser }) => {
   const [form, setForm] = useState({ name: '', email: '', phone: '' });
 
-  // Ensure that the form is pre-filled when editUser is passed
   useEffect(() => {
     if (editUser) {
-      setForm(editUser); // Fill the form with the current user's data
+      setForm(editUser); 
     } else {
-      setForm({ name: '', email: '', phone: '' }); // Reset if no editUser
+      setForm({ name: '', email: '', phone: '' }); 
     }
-  }, [editUser]); // Effect runs when editUser changes
+  }, [editUser]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -20,11 +19,11 @@ const UserForm = ({ addUser, editUser, updateUser }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (editUser) {
-      updateUser(form); // Call updateUser with the form data
+      updateUser(form); 
     } else {
-      addUser(form); // Call addUser if it's a new user
+      addUser(form); 
     }
-    setForm({ name: '', email: '', phone: '' }); // Reset form after submit
+    setForm({ name: '', email: '', phone: '' }); 
   };
 
   return (
