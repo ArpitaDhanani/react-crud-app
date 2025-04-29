@@ -10,7 +10,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [editUser, setEditUser] = useState(null);
 
-  // 🔹 Load from localStorage or fetch from API
   useEffect(() => {
     const storedUsers = localStorage.getItem("users");
     if (storedUsers) {
@@ -22,8 +21,7 @@ function App() {
         .catch(err => console.error("Error fetching users:", err));
     }
   }, []);
-
-  // 🔹 Save to localStorage when users change
+  
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
@@ -45,8 +43,8 @@ function App() {
     const updatedUsers = users.map((user) =>
       user.id === updatedUser.id ? updatedUser : user
     );
-    setUsers(updatedUsers); // Update the user in state
-    setEditUser(null); // Reset the editUser state to stop editing
+    setUsers(updatedUsers); 
+    setEditUser(null); 
     toast.info("User updated!");
   };
   
