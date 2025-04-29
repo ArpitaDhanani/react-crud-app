@@ -1,0 +1,59 @@
+/* src/components/UserList.css */
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;         /* Allows wrapping of cards */
+    gap: 16px;               /* Space between cards */
+    justify-content: center; /* Center all cards horizontally */
+    margin-top: 20px;
+  }
+  
+  .user-card {
+    width: 320px;            /* Fixed width for each card */
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 48%;
+  }
+  
+  .edit-btn {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background: #45a049;
+  }
+  
+  .delete-btn {
+    background: #f44336;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background: #d32f2f;
+  }
+  

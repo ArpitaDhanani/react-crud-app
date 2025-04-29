@@ -1,0 +1,42 @@
+/* src/components/UserForm.css */
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-form input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline-color: #4caf50;
+    transition: border 0.3s ease;
+  }
+  
+  .user-form input:focus {
+    border-color: #4caf50;
+  }
+  
+  .user-form button {
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .user-form button:hover {
+    background-color: #45a049;
+  }
+  
