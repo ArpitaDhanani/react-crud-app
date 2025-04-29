@@ -1,6 +1,5 @@
-// src/components/UserList.js
 import React from 'react';
-import './UserList.css'; // 👈 Add this line
+import './UserList.css'; 
 
 const UserList = ({ users, onEdit, onDelete }) => {
     return (
